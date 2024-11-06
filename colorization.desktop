@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=Krita/PythonPlugin
+X-KDE-Library=colorization
+X-Python-2-Compatible=false
+X-Krita-Manual=colorization.html
+Name=Colorization
+Comment=Sketch Colorization based on Reference and Structure
+

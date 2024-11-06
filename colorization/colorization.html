@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin Krita - Colorisation Automatique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .code-block {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        li, td, th , pre {
+          color: #1f1f1f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Plugin Krita - Colorisation Automatique des Dessins</h1>
+        <p>Ce plugin permet de faire des inférences sur le canvas dans Krita. En utilisant une intelligence artificielle, il colorise automatiquement les dessins à partir d'un fichier de référence pour les couleurs et du canvas actuel.</p>
+
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+            <li>Colorisation automatique de croquis avec une image de référence.</li>
+            <li>Prend en charge les dessins de style animé.</li>
+            <li>Basé sur le modèle <strong>Anime-Sketch-Colorizer</strong>.</li>
+            <li>Utilisation de réseaux de neurones pour améliorer la précision des couleurs.</li>
+        </ul>
+
+        <h2>Installation des dépendances</h2>
+        <p>Si vous rencontrez des problèmes avec les dépendances, veuillez installer les paquets nécessaires à partir du fichier <strong>requirements.txt</strong> inclus dans le plugin.</p>
+        <p>Voici les principales bibliothèques requises :</p>
+        <div class="code-block">
+            <pre>
+pytorch
+torchvision
+numpy
+opencv-python
+matplotlib
+            </pre>
+        </div>
+
+        <h2>Référence GitHub</h2>
+        <p>Le plugin utilise le code et le modèle fournis par le dépôt GitHub suivant :</p>
+        <p><a href="https://github.com/delta6189/Anime-Sketch-Colorizer" target="_blank">Anime-Sketch-Colorizer - GitHub Repository</a></p>
+
+        <h2>Données et Modèle</h2>
+        <p>Le modèle est pré-entraîné pour coloriser des dessins de style animé. Il utilise le dataset suivant :</p>
+        <p><a href="https://www.kaggle.com/ktaebum/anime-sketch-colorization-pair" target="_blank">Anime Sketch Colorization Pair - Kaggle Dataset</a></p>
+        <p>Vous pouvez télécharger le modèle pré-entraîné à partir de ce lien :</p>
+        <p><a href="https://drive.google.com/open?id=1pIZCjubtyOUr7AXtGQMvzcbKczJ9CtQG" target="_blank">Télécharger le modèle pré-entraîné (449MB)</a></p>
+
+        <h2>Paramètres d'entraînement</h2>
+        <table>
+            <tr>
+                <th>Paramètre</th>
+                <th>Valeur</th>
+            </tr>
+            <tr>
+                <td>Learning rate</td>
+                <td>2e-4</td>
+            </tr>
+            <tr>
+                <td>Batch size</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Epoch</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Optimiseur</td>
+                <td>Adam</td>
+            </tr>
+            <tr>
+                <td>Data Augmentation</td>
+                <td>RandomResizedCrop(256), RandomHorizontalFlip()</td>
+            </tr>
+        </table>
+
+        <h2>Test et Utilisation</h2>
+        <p>Pour tester le modèle ou entraîner votre propre modèle, veuillez vous référer aux fichiers <strong>train.ipynb</strong> et <strong>test.ipynb</strong> fournis dans le dépôt GitHub.</p>
+
+        <div class="references">
+          <h2>Références</h2>
+          <ol>
+              <li>Taebum Kim, "Anime Sketch Colorization Pair", <a href="https://www.kaggle.com/ktaebum/anime-sketch-colorization-pair" target="_blank">https://www.kaggle.com/ktaebum/anime-sketch-colorization-pair</a>, 2019., 2020.1.13.</li>
+              <li>Jim Bohnslav, "opencv_transforms", <a href="https://github.com/jbohnslav/opencv_transforms" target="_blank">https://github.com/jbohnslav/opencv_transforms</a>, 2020.1.13.</li>
+              <li>Takeru Miyato et al., "Spectral Normalization for Generative Adversarial Networks", ICLR 2018, 2018.2.18.</li>
+              <li>Ozan Oktay et al., "Attention U-Net: Learning Where to Look for the Pancreas", MIDL 2018, 2018.5.20.</li>
+              <li>Siyuan Qiao et al., "Weight Standardization", <a href="https://arxiv.org/abs/1903.10520" target="_blank">https://arxiv.org/abs/1903.10520</a>, 2019.3.25., 2020.1.19.</li>
+              <li>Tero Karras, Samuli Laine, Timo Aila, "A Style-Based Generator Architecture for Generative Adversarial Networks", <a href="https://arxiv.org/abs/1812.04948" target="_blank">https://arxiv.org/abs/1812.04948</a>, 2019.3.29., 2020.1.22.</li>
+          </ol>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
