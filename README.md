@@ -56,6 +56,3 @@ Make sure the model files are in `.ckpt` format.
 
 Contributions to enhance this plugin are welcome! Feel free to submit issues or pull requests on the GitHub repository.
 
----
-
-This README file should give users clear instructions on installing, configuring, and using the plugin in Krita for automatic sketch colorization.
